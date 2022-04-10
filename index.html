@@ -1,45 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/9618e376df.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
 </head>
+
 <style>
-    .bg{
+    body{
+        background-color: #141414;
+    }
+    .bg {
         position: absolute;
         width: 100%;
         height: 100vh;
     }
-    .logo{
+
+    .logo {
         position: relative;
         width: 100px;
     }
-    .filmname{
-        position: absolute;
-        
-        top:200px;
-        left:60px;
+
+    .filmname {
+        position: relative;
+
+        top: 80px;
+        left: 60px;
 
     }
-    .nav{
+
+    .nav {
         z-index: 100;
-        position:absolute;
+        position: absolute;
         width: 100%;
-        background:linear-gradient(black,transparent);
+        background: linear-gradient(black, transparent);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-</style>
-<body>
+
+    .ul {
+        display: flex;
+        color: aliceblue;
+        list-style: none;
+        justify-content: space-between;
+        width: 38%
+    }
+
+    .nav_content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .white {
+        color: white;
+        font-size:larger
+    }
+
+    .ul a {
+        text-decoration: none;
+        color: inherit;
+       
+        font-family: 'Open Sans', sans-serif;
+    }
+    .active{
+        font-weight: 600;
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        width: 20%;
+        justify-content: space-around;
+    }
+    .ul2{
+        list-style: none;
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+    }
+    .dropdown{
+        width: 200px;
+        height: 350px;
+        position: absolute;
+        background-color: black;
+        right: 10px;
+        top:75px;
+    }
+    .d-none{
+        display: none !important;
+    }
+    .dropdown_btn{
+        background-color: transparent;
+        border-style: none;
+
+    }
+    .dropdown_btn:hover{
+        cursor: pointer;
+    }
+    .movie{
+        margin-top: 110px;
+        position: relative;
+        margin-left: 110px;
+      color: aliceblue;
+      
+       
+       
+    }
+  
+    .about_movie{
+        position: relative;
+        margin-top: 10px;
+        margin-left: 50px;
+        color: aliceblue;
+   font-size: 20px;
+    }
+    .des{
+      
+    }
+    .buttons{
+        position: relative;
+        margin-left: 4%;
+        display: flex;
+        width: 300px;
+        height: 50px;
+    }
+    .but2{
+        margin-left: 20px;
+       
+    }
+    .but1{
+        width:100px;
+
+    }
+
     
+
+</style>
+
+<body>
+
     <div class="main">
         <div class="nav">
-            <img src="images/logo.png"class="logo">
-    
+            <img src="images/logo.png" class="logo">
+            <div class="nav_content">
+
+                <ul class="ul">
+                    <li> <a href="#" class="active">Home</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">News & Popular</a></li>
+                    <li><a href="#">My List</a></li>
+                </ul>
+                <div class="right">
+                    <ul class="ul2">
+
+                 <li><i class="fa-solid fa-magnifying-glass white"></i></li>   
+                 <li> <i class="fa-solid fa-bell white"></i></li>  
+                 <li >
+                    <button onclick="toggleDropdown()" class="dropdown_btn">
+                        <img src="images/avatar.png">  
+                        <i class="fa-solid fa-caret-down white"></i> 
+                    </button>
+                    </li> 
+
+                    </ul>
+
+                </div>
+            </div>
+
         </div>
-        <img src="images/main.webp"class="bg">
-        
-        <img src="images/film name - Copy.webp"class="filmname">
+        <img src="images/main.webp" class="bg">
+
+        <img src="images/film name - Copy.webp" class="filmname">
     </div>
+    <div class="dropdown d-none" id="dropdown">
+        
+    </div>
+    <div class="des">
+
+
+  <h2 class="movie">#1 in Movies Today</h2>
+    <p class="about_movie"> An unhappy Mouna plots to divorce her talkative <br>
+    husband Yaazhart and asks therapist malarvizhi to woo <br> him-but faces a dilemma when love blooms. </p>
+        </div>
+        <div class="buttons">
+            <button class="but1"><i class="fa-regular fa-circle-play"></i>Play</button>
+            <button class="but2">More info</button>
+        </div>
+        <div class="content">
+            
+        </div>
 </body>
+
+<script>
+    const toggleDropdown=()=>{
+        var element = document.getElementById("dropdown");
+        if(element.classList.contains("d-none")){
+            element.classList.remove("d-none")
+        }else{
+            element.classList.add("d-none")
+        }
+    }
+</script>
 </html>
