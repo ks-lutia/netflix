@@ -21,6 +21,7 @@
         position: absolute;
         width: 100%;
         height: 100vh;
+        z-index: -1 ;
     }
 
     .logo {
@@ -165,6 +166,7 @@
      padding: 20px;
      margin-top: 20px;
      position: relative;
+     z-index: 100;
     }
     .icons{
         color:aliceblue;
@@ -178,35 +180,49 @@
     }
     .filmcard{
         display: flex;
+        position:relative;
+        z-index: 100;
+        width :100%;
+        overflow-x: scroll;
+        
     }
-    
-    .filmcard2{
-        display: flex;
+    .filmcard::-webkit-scrollbar{
+         display:none; 
     }
-    .filmcard3{
-        display: flex;
+    .filmcard img{
+        margin-left:10px;
     }
-    .filmcard4{
-        display: flex;
+    .first{
+        margin-top:200px;
     }
-    .filmcard5{
-        display: flex;
+    .scroll{
+        position:sticky;
+        height: 100px;
+        right:0;
+        background-color:rgb(62, 3, 3);
+        border:none !important;
+        color:white !important;
+        
     }
-    .filmcard6{
-        display: flex;
+    .right-scroll{
+        right:0
     }
-    .filmcard7{
-        display: flex;
+    .left-scroll{
+        left:0;
     }
-    .filmcard8{
-        display: flex;
+    .navigation{
+        width:100%;
+        position:relative;
+        z-index: 111;
+        top:0;
+        left:0;
+        display:flex;
+        align-items: center;
+        height:100%;
+        justify-content: space-between;
+        
     }
-    .filmcard9{
-        display: flex;
-    }
-    .filmcard10{
-        display: flex;
-    }
+   
     
 
     
@@ -265,26 +281,46 @@
             <button class="but1"> <i class="fa-solid fa-play"></i> </i>Play</button>
             <button class="but2"><i class="fa-light fa-circle-info"></i>More info</button>
         </div>
-       <h3 class="pop"> Popular On Netflix</h3>
+       <h3 class="pop first"> Popular On Netflix</h3>
+       <div>
+        <div class="filmcard" id="feature-1">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            <img src="images/film card.webp"class="card">
+            
+        </div>
+        <div class="navigation">
+            <button class="left-scroll scroll" onclick="scroll_Left('feature-1')"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="right-scroll scroll" onclick="scrollRight('feature-1')"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+       </div>
+        
+        <h3 class="pop"> Trending On Netflix</h3>
         <div class="filmcard">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
-
-      
-        </div>
-        <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard2">
-            <img src="images/film card.webp"class="card">
-            <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
         </div>
         <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard3">
+        <div class="filmcard">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
@@ -292,7 +328,7 @@
             <img src="images/film card.webp"class="card">
         </div>
         <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard4">
+        <div class="filmcard">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
@@ -300,7 +336,7 @@
             <img src="images/film card.webp"class="card">
         </div>
         <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard5">
+        <div class="filmcard">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
@@ -308,7 +344,7 @@
             <img src="images/film card.webp"class="card">
         </div>
         <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard6">
+        <div class="filmcard">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
@@ -316,7 +352,7 @@
             <img src="images/film card.webp"class="card">
         </div>
         <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard7">
+        <div class="filmcard">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
@@ -324,7 +360,7 @@
             <img src="images/film card.webp"class="card">
         </div>
         <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard8">
+        <div class="filmcard">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
@@ -332,7 +368,7 @@
             <img src="images/film card.webp"class="card">
         </div>
         <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard9">
+        <div class="filmcard">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
@@ -340,7 +376,7 @@
             <img src="images/film card.webp"class="card">
         </div>
         <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard10">
+        <div class="filmcard">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
             <img src="images/film card.webp"class="card">
@@ -359,21 +395,36 @@
             element.classList.add("d-none")
         }
     }
-    {
-        {
-            <i class="fa-regular fa-circle-plus"></i>
-            <i class="fa-regular fa-thumbs-down"></i>
-            <i class="fa-regular fa-thumbs-up"></i>
-            <i class="fa-regular fa-circle-chevron-down"></i>
-            <i class="fa-solid fa-play"></i>
+   
+const scrollRight=(elem)=>{
+        var divElement = document.getElementById(elem);
+        
+        console.log(divElement.scrollWidth)
+        console.log(divElement.clientWidth)
+        console.log(divElement.scrollLeft)
+        maxScrollWidth=divElement.scrollWidth-divElement.clientWidth
+        if(divElement.scrollLeft>=maxScrollWidth){
+            divElement.scroll({
+        	left: 0,//scroll to the bottom of the element
+	     behavior: 'smooth' //auto, smooth, initial, inherit
+});   
         }
-    }
-    <img onmouseover="enlargeImage(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
+        else{
 
-<script>
-function enlargeImage(x) {
-  x.style.height = "64px";
-  x.style.width = "64px";
-}
+            divElement.scroll({
+                left: divElement.scrollLeft + 800,//scroll to the bottom of the element
+                behavior: 'smooth' //auto, smooth, initial, inherit
+    });
+        }
+        }
+ 
+    const scroll_Left=(elem)=>{
+        var divElement = document.getElementById(elem);
+        divElement.scroll({
+        	left: divElement.scrollLeft - 800,//scroll to the bottom of the element
+	        behavior: 'smooth' //auto, smooth, initial, inherit
+});
+    }
+
 </script>
 </html>
