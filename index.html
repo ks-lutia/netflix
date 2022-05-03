@@ -10,288 +10,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <style>
-    body{
-        background-color: #141414;
-    }
- 
-    .bg {
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        z-index: -1 ;
-    }
-
-    .logo {
-        position: relative;
-        width: 100px;
-    }
-
-    .filmname {
-        position: relative;
-
-        top: 80px;
-        left: 60px;
-
-    }
-
-    .nav {
-        z-index: 100;
-        position: fixed;
-        width: 100%;
-        background: linear-gradient(black, transparent);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-       
-    }
-    .nav_black{
-        background-color: black;
-    }
-
-    .ul {
-        display: flex;
-        color: aliceblue;
-        list-style: none;
-        justify-content: space-between;
-        width: 38%
-    }
-
-    .nav_content {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .white {
-        color: white;
-        font-size:larger
-    }
-
-    .ul a {
-        text-decoration: none;
-        color: inherit;
-       
-        font-family: 'Open Sans', sans-serif;
-    }
-    .active{
-        font-weight: 600;
-    }
-    .right{
-        display: flex;
-        align-items: center;
-        width: 20%;
-        justify-content: space-around;
-    }
-    .ul2{
-        list-style: none;
-        display: flex;
-        width: 80%;
-        justify-content: space-around;
-    }
-    .dropdown{
-        width: 200px;
-        height: 350px;
-        position: absolute;
-        background-color: black;
-        right: 10px;
-        top:75px;
-    }
-
-    .d-none{
-        display: none !important;
-    }
-    .dropdown_btn{
-        background-color: transparent;
-        border-style: none;
-
-    }
-    .dropdown_btn:hover{
-        cursor: pointer;
-    }
-    .movie{
-        margin-top: 110px;
-        position: relative;
-        margin-left: 110px;
-      color: aliceblue;
-      
-       
-       
-    }
-  
-    .about_movie{
-        position: relative;
-        margin-top: 10px;
-        margin-left: 50px;
-        color: aliceblue;
-   font-size: 20px;
-    }
-    .des{
-      
-    }
-    .buttons{
-        position: relative;
-        margin-left: 4%;
-        display: flex;
-        width: 300px;
-        height: 50px;
-    }
-    .but2{
-        margin-left: 20px;
-        border-radius: 5px;
-        width: 167px;
-        border-style: none;
-        background-color: rgb(158, 161, 163);
-        color: aliceblue;
-        font-size: 16px;
-        font-weight: bold;
-        height: 40px;
-   
-    }
-    .but1{
-        display: flex;
-        align-items: center;
-     
-        border-radius: 5px;
-        width: 100px;
-        border-style: none;
-        font-size: 16px;
-        font-weight: bold;
-        background-color: aliceblue;
-        color: black;
-        justify-content: space-around;
-        height: 40px;
-
-    }
-    .pop{
-        color: aliceblue;
-     
-   
-     margin-left: 20px;
-     z-index: 100;
-    }
-    .icons{
-        color:aliceblue;
-        display:flex;
-        margin-top:10px;
-    }
-    .card{
-        width: 20%;
-        
-        border-radius: 3px;
-        position: relative;
-        margin-bottom: 50px;
-    }
-    .filmcard{
-        display: flex;
-      
-        z-index: 100;
-        width :100%;
-        overflow-x: scroll;
-       
-       
-      
-        
-    }
-
-   
-    .filmcard::-webkit-scrollbar{
-         display:none; 
-    }
-    .filmcard img{
-        margin-left:10px;
-    }
-    .first{
-        margin-top:100px;
-    }
-    .scroll{
-       
-       
-        height: 60px;
-    
-        background-color:rgb(62, 3, 3);
-        border:none !important;
-        color:white !important;
-        
-    }
-    .right-scroll{
-        right:0
-    }
-    .left-scroll{
-        left:0;
-    }
-  .navigation{
-        width:100%;
-        position:relative;
-        z-index: 111;
-        top:0;
-        left:0;
-        display:flex;
-        align-items: center;
-        height: 30px;
-        justify-content: space-between;
-        
-    }
-    .foot_icons{
-        color: antiquewhite;
-        margin-left: 30%;
-        width: 50px;
-        display: flex;
-        margin-top: 70px;
-        justify-content: space-between;
-      
-    }
-    
-    .footer{
-        display: flex;
-        justify-content: space-between;
-        color: antiquewhite;
-        margin-left: 30%;
-        width: 50px;
-        display: flex;
-        margin-top: 70px;
-        justify-content: space-between;
-    }
-
-    
-    .fa-brands fa-instagram{
-        margin-left: 40px;
-    }
-
-    
-       
-    
 
 </style>
 
 <body>
 
     <div class="main">
-        <div class="nav"id="nav">
+        <div class="nav" id="nav">
             <img src="images/logo.png" class="logo">
             <div class="nav_content">
-
-                <ul class="ul">
-                    <li> <a href="#" class="active">Home</a></li>
-                    <li><a href="#">TV Shows</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">News & Popular</a></li>
-                    <li><a href="#">My List</a></li>
-                </ul>
+                <div class="menu">
+                    <i class="fa-solid fa-bars white"></i>
+    
+                    <ul class="ul">
+                        <li> <a href="#" class="active">Home</a></li>
+                        <li><a href="#">TV Shows</a></li>
+                        <li><a href="#">Movies</a></li>
+                        <li><a href="#">News & Popular</a></li>
+                        <li><a href="#">My List</a></li>
+                    </ul>
+                </div>
                 <div class="right">
                     <ul class="ul2">
 
-                 <li><i class="fa-solid fa-magnifying-glass white"></i></li> 
-                
-                 <li> <i class="fa-solid fa-bell white"></i></li>  
-                 <li >
-                    <button onclick="toggleDropdown()" class="dropdown_btn">
-                        <img src="images/avatar.png">  
-                        <i class="fa-solid fa-caret-down white"></i> 
-                    </button>
-                    </li> 
+                        <li><i class="fa-solid fa-magnifying-glass white"></i></li>
+
+                        <li> <i class="fa-solid fa-bell white"></i></li>
+                        <li>
+                            <button onclick="toggleDropdown()" class="dropdown_btn">
+                                <img src="images/avatar.png">
+                                <i class="fa-solid fa-caret-down white"></i>
+                            </button>
+                        </li>
 
                     </ul>
 
@@ -304,223 +61,262 @@
         <img src="images/filmname2.webp" class="filmname">
     </div>
     <div class="dropdown d-none" id="dropdown">
-        
+
     </div>
     <div class="des">
 
 
-  <h2 class="movie">#1 in Movies Today</h2>
-    <p class="about_movie"> An unhappy Mouna plots to divorce her talkative <br>
-    husband Yaazhart and asks therapist malarvizhi to woo <br> him-but faces a dilemma when love blooms. </p>
-        </div>
-        <div class="buttons">
-            <button class="but1"> <i class="fa-solid fa-play"></i> </i>Play</button>
-            <button class="but2"><i class="fa-light fa-circle-info"></i>More info</button>
-        </div>
-       <h3 class="pop first"> Popular On Netflix</h3>
-       <div>
-        <div class="filmcard" id="feature-1">
-            <img src="images/film card.webp"class="card">
-            <img src="images/net1.jpg"class="card">
-            <img src="images/net11.jpg"class="card">
-            <img src="images/net2.jpg"class="card">
-            <img src="images/net3.jpg"class="card">
-            <img src="images/net4.jpg"class="card">
-            <img src="images/net21.jpg"class="card">
-            <img src="images/net22.jpg"class="card">
-            <img src="images/net23.jpg"class="card">
-            <img src="images/net24.jpg"class="card">
-            
-        </div>   
-       
-        <div class="navigation">
-            <button class="left-scroll scroll" onclick="scroll_Left('feature-1')"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="right-scroll scroll" onclick="scrollRight('feature-1')"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
-       </div>
-        
-        <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard"  id="feature-2">
-            <img src="images/net5.jpg"class="card">
-            <img src="images/net6.jpg"class="card">
-            <img src="images/net7.jpg"class="card">
-            <img src="images/net8.jpg"class="card">
-            <img src="images/net9.jpeg"class="card">
-            <img src="images/net10.jpg"class="card">
-            <img src="images/net11.jpg"class="card">
-            <img src="images/net12.jpg"class="card">
-            <img src="images/net25.jpg"class="card">
-            <img src="images/net26.jpg"class="card">
-        </div>
-        <div class="navigation">
-            <button class="left-scroll scroll" onclick="scroll_Left('feature-2')"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="right-scroll scroll" onclick="scrollRight('feature-2')"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
-        <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard"id="feature-3">
-            <img src="images/net13.jpg"class="card">
-            <img src="images/net14.jpg"class="card">
-            <img src="images/net15.jpg"class="card">
-            <img src="images/net16.jpg"class="card">
-           
-            <img src="images/net17.jpg"class="card">
-            <img src="images/net18.jpg"class="card">
-            <img src="images/net19.jpg"class="card">
-        </div>
-        <div class="navigation">
-            <button class="left-scroll scroll" onclick="scroll_Left('feature-3')"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="right-scroll scroll" onclick="scrollRight('feature-3')"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
-        <h3 class="pop"> New Relieses</h3>
-        <div class="filmcard"id="feature-4">
-            <img src="images/net18.jpg"class="card">
-            <img src="images/net19.jpg"class="card">
-            <img src="images/net20.jpg"class="card">
-            <img src="images/net29.jpg"class="card">
-            <img src="images/net30.jpg"class="card">
-            <img src="images/net27.jpg"class="card">
-            <img src="images/net28.jpg"class="card">
-            
-
-        </div>
-        <div class="navigation">
-            <button class="left-scroll scroll" onclick="scroll_Left('feature-4')"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="right-scroll scroll" onclick="scrollRight('feature-4')"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
-        <h3 class="pop"> English Movies</h3>
-        <div class="filmcard"id="feature-5">
-            <img src="images/net31.jpg"class="card">
-            <img src="images/net32.jpg"class="card">
-            <img src="images/net33.jpg"class="card">
-            <img src="images/net34.jpg"class="card">
-            <img src="images/net35.jpg"class="card">
-            <img src="images/net36.jpg"class="card">
-            <img src="images/net37.jpg"class="card">
-        </div>
-
-        <div class="navigation">
-            <button class="left-scroll scroll" onclick="scroll_Left('feature-5')"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="right-scroll scroll" onclick="scrollRight('feature-5')"><i class="fa-solid fa-chevron-right"></i></button>
+        <h2 class="movie">#1 in Movies Today</h2>
+        <p class="about_movie"> An unhappy Mouna plots to divorce her talkative <br>
+            husband Yaazhart and asks therapist malarvizhi to woo <br> him-but faces a dilemma when love blooms. </p>
+    </div>
+    <section class="thumbSection">
+        <h3 class="pop first thumbTitle"> Popular On Netflix</h3>
+        <div class="thumbTiles swiper-container swiper">
+          
+            <div class="swiper-wrapper">
+               
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/film card.webp" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net1.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net11.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net2.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net3.jpg" class="thumbTile__image">
+                    </a>
+                </div>
             </div>
-        <h3 class="pop"> Blockbuster Movies</h3>
-        <div class="filmcard"id="feature-6">
-            <img src="images/net38.jpg"class="card">
-            <img src="images/net39.jpg"class="card">
-            <img src="images/net40.jpg"class="card">
-            <img src="images/net41.jpg"class="card">
-            <img src="images/net42.jpg"class="card">
-            <img src="images/net43.jpg"class="card">
-            <img src="images/net44.jpg"class="card">
-        </div>
-        <div class="navigation">
-            <button class="left-scroll scroll" onclick="scroll_Left('feature-6')"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="right-scroll scroll" onclick="scrollRight('feature-6')"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
-        <h3 class="pop"> Thriller Movies</h3>
-        <div class="filmcard"id="feature-7">
-            <img src="images/net45.jpg"class="card">
-            <img src="images/net46.jpg"class="card">
-            <img src="images/net47.jpg"class="card">
-            <img src="images/net48.jpg"class="card">
-            <img src="images/net49.jpg"class="card">
-            <img src="images/net50.jpg"class="card">
-            <img src="images/net51.jpg"class="card">
-        </div>
-        <div class="navigation">
-            <button class="left-scroll scroll" onclick="scroll_Left('feature-7')"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="right-scroll scroll" onclick="scrollRight('feature-7')"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
-        <h3 class="pop"> Trending On Netflix</h3>
-        <div class="filmcard"id="feature-8">
-            <img src="images/net52.jpg"class="card">
-            <img src="images/net53.jpg"class="card">
-            <img src="images/net54.jpg"class="card">
-            <img src="images/net55.jpg"class="card">
-            <img src="images/net56.jpg"class="card">
-            <img src="images/net57.jpg"class="card">
-            <img src="images/net58.jpg"class="card">
-        </div>
-        <div class="navigation">
-            <button class="left-scroll scroll" onclick="scroll_Left('feature-8')"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="right-scroll scroll" onclick="scrollRight('feature-8')"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
-        <h3 class="pop"> Period Pieces</h3>
-        <div class="filmcard"id="feature-9">
-            <img src="images/net59.jpg"class="card">
-            <img src="images/net60.jpg"class="card">
-            <img src="images/net61.jpg"class="card">
-            <img src="images/net63.jpg"class="card">
-            <img src="images/net64.jpg"class="card">
-            <img src="images/net65.jpg"class="card">
-            <img src="images/net66.jpg"class="card">
-        </div>
-        <div class="navigation">
-            <button class="left-scroll scroll" onclick="scroll_Left('feature-9')"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="right-scroll scroll" onclick="scrollRight('feature-9')"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
-
-        <div class="footer">
+    
+    
           
-                <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-youtube"></i>
-
-          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-        <script>
-               const nav = document.getElementById('nav');
-            window.addEventListener('scroll',() => {
-                if (window.scrollY>=100){
-                    nav.classList.add('nav_black')
-                }else{
-                    nav.classList.remove('nav_black');
-                }
-            })
-            const toggleDropdown=()=>{
-                var element = document.getElementById("dropdown");
-                if(element.classList.contains("d-none")){
-                    element.classList.remove("d-none")
-                }else{
-                    element.classList.add("d-none")
+    </section>
+
+    <section class="thumbSection">
+        <h3 class="pop first thumbTitle"> Popular On Netflix</h3>
+        <div class="thumbTiles swiper-container swiper">
+          
+            <div class="swiper-wrapper">
+               
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/film card.webp" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net1.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net11.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net2.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net3.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+            </div>
+    
+    
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <section class="thumbSection">
+        <h3 class="pop first thumbTitle"> Popular On Netflix</h3>
+        <div class="thumbTiles swiper-container swiper">
+          
+            <div class="swiper-wrapper">
+               
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/film card.webp" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net1.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net11.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net2.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net3.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+            </div>
+    
+    
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <section class="thumbSection">
+        <h3 class="pop first thumbTitle"> Popular On Netflix</h3>
+        <div class="thumbTiles swiper-container swiper">
+          
+            <div class="swiper-wrapper">
+               
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/film card.webp" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net1.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net11.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net2.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net3.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+            </div>
+    
+    
+          
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    
+    
+
+   
+   
+    <div class="footer">
+
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+
+
+    </div>
+    <script>
+         var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            spaceBetween: 5,
+            slidesPerView: 2,
+            loop: true,
+            freeMode: true,
+            loopAdditionalSlides: 5,
+            speed: 500,
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 5,
+                    slidesPerGroup: 5,
+                    freeMode: false
                 }
             }
-           
-        const scrollRight=(elem)=>{
-                var divElement = document.getElementById(elem);
-                
-                // console.log(divElement.scrollWidth)
-                // console.log(divElement.clientWidth)
-                // console.log(divElement.scrollLeft)
-                maxScrollWidth=divElement.scrollWidth-divElement.clientWidth
-                if(divElement.scrollLeft>=maxScrollWidth){
-                    divElement.scroll({
-                    left: 0,//scroll to the bottom of the element
-                 behavior: 'smooth' //auto, smooth, initial, inherit
-        });   
-                }
-                else{
-        
-                    divElement.scroll({
-                        left: divElement.scrollLeft + 800,//scroll to the bottom of the element
-                        behavior: 'smooth' //auto, smooth, initial, inherit
-            });
-                }
-                }
-         
-            const scroll_Left=(elem)=>{
-                var divElement = document.getElementById(elem);
+        })
+
+
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 100) {
+                nav.classList.add('nav_black')
+            } else {
+                nav.classList.remove('nav_black');
+            }
+        })
+        const toggleDropdown = () => {
+            var element = document.getElementById("dropdown");
+            if (element.classList.contains("d-none")) {
+                element.classList.remove("d-none")
+            } else {
+                element.classList.add("d-none")
+            }
+        }
+
+        const scrollRight = (elem) => {
+            var divElement = document.getElementById(elem);
+
+            // console.log(divElement.scrollWidth)
+            // console.log(divElement.clientWidth)
+            // console.log(divElement.scrollLeft)
+            maxScrollWidth = divElement.scrollWidth - divElement.clientWidth
+            if (divElement.scrollLeft >= maxScrollWidth) {
                 divElement.scroll({
-                    left: divElement.scrollLeft - 800,//scroll to the bottom of the element
+                    left: 0,//scroll to the bottom of the element
                     behavior: 'smooth' //auto, smooth, initial, inherit
-        });
+                });
             }
-            
-         
-        
-        </script>
-       
+            else {
+
+                divElement.scroll({
+                    left: divElement.scrollLeft + 800,//scroll to the bottom of the element
+                    behavior: 'smooth' //auto, smooth, initial, inherit
+                });
+            }
+        }
+
+        const scroll_Left = (elem) => {
+            var divElement = document.getElementById(elem);
+            divElement.scroll({
+                left: divElement.scrollLeft - 800,//scroll to the bottom of the element
+                behavior: 'smooth' //auto, smooth, initial, inherit
+            });
+        }
+
+
+
+    </script>
+
 </body>
+
 </html>
-
-
