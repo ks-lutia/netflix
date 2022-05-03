@@ -32,7 +32,7 @@ body {
 
 .filmname {
     position: relative;
-    max-width:30%;
+    max-width: 30%;
     top: 2rem;
     left: 1rem;
 
@@ -66,31 +66,38 @@ body {
     justify-content: space-between;
     width: 100%
 }
-.fa-bars{
+
+.fa-bars {
     display: none;
 }
-.menu{
-    width:37%;
+
+.menu {
+    width: 37%;
     display: flex;
     align-items: center;
 }
+
 .right {
     display: flex;
     align-items: center;
     width: 20%;
     justify-content: space-around;
 }
-@media(max-width:1080px){
+
+@media(max-width:1080px) {
     .ul {
         visibility: hidden;
     }
-    .fa-bars{
+
+    .fa-bars {
         display: block;
     }
+
     .right {
-        width:50%
+        width: 50%
     }
 }
+
 .nav_content {
     display: flex;
     width: 100%;
@@ -150,7 +157,7 @@ body {
     position: relative;
     margin-left: 10px;
     color: aliceblue;
-    font-size:5vw;
+    font-size: 5vw;
 }
 
 .about_movie {
@@ -320,7 +327,7 @@ body {
 
 .thumbTiles.swiper-container {
     padding: 0 4%;
-    overflow: hidden;
+
 }
 
 .thumbTile {
@@ -363,6 +370,45 @@ body {
     transition: transform 0.1s ease-out;
 }
 
+.popup {
+    width: 70vh;
+    height: auto;
+    overflow: hidden;
+}
+
+/* .swiper-slide{
+    animation: scaledown .4s linear;
+    animation-fill-mode: forwards;
+}
+.swiper-slide:hover{
+    z-index: 1000;
+    animation: scale .4s linear;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes scaledown{
+    0%{
+        -webkit-transform:sacale(2);
+        transform: scale(2);
+    }
+    100%{
+        -webkit-transform:sacale(1.0);
+        transform: scale(1.0);
+    }
+}
+@keyframes scale{
+    0%{
+        -webkit-transform:sacale(1);
+        transform: scale(1);
+        
+    }
+    100%{
+        -webkit-transform:sacale(2);
+        transform: scale(2);
+    }
+} */
 @media screen and (min-width: 640px) {
 
     .thumbTiles .swiper-button-prev::after,
@@ -380,5 +426,15 @@ body {
     .thumbTiles:hover .swiper-button-next::after {
         display: block;
     }
+    .popup {
+        width: 50vh;
+        height: auto;
+    }
 
+}
+
+#test {
+    
+    position: absolute;
+    z-index: 1001;
 }
