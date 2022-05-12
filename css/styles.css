@@ -55,7 +55,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 1%;
+   
 
 }
 
@@ -94,7 +94,7 @@ body {
     .ul {
         display: block;
         
-        /* visibility: hidden; */
+ visibility: hidden;
     }
 
     .fa-bars {
@@ -321,6 +321,7 @@ body {
     display: flex;
     margin-top: 70px;
     justify-content: space-between;
+    margin-bottom: 20px;
 } 
 
 
@@ -495,6 +496,8 @@ body {
 }
 .footer_item li{
     list-style: none;
+
+    margin-bottom: 10px;
 }
 
 .foot2{
@@ -546,5 +549,9 @@ body {
 
 }
 .footlegal{
+  
     margin-left: 20px;
+}
+pad{
+    padding-top: 50vh;
 }
