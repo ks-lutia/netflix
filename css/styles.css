@@ -92,7 +92,9 @@ body {
 
 @media(max-width:1080px) {
     .ul {
-        visibility: hidden;
+        display: block;
+        
+        /* visibility: hidden; */
     }
 
     .fa-bars {
@@ -473,18 +475,30 @@ body {
     z-index: 1001;
     border-radius: 10px;
 }
-.foot1{
+.footer-main{
     display: flex;
     width: 65%;
     margin-left: 10%;
-   
     justify-content: space-between;
     margin-top: 5%;
     color: #5c5c5c;
     font-size: medium;
 }
-.foot2{
+.main-footer{
     display: flex;
+    color: #5c5c5c;
+    font-size: medium;
+    justify-content: space-around;
+}
+.footer_item{
+    display: block;
+}
+.footer_item li{
+    list-style: none;
+}
+
+.foot2{
+    /* display: flex; */
     width: 65%;
     margin-left: 10%;
    
