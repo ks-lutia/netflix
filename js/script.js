@@ -88,6 +88,7 @@ for (var index = 0; index < swiperSlide.length; index++) {
         let imgUrl = this.getElementsByTagName("img")[0].src;
         let newImg = document.createElement("img");
         newImg.src = imgUrl;
+        newImg.style.aspectRatio = "16/9";
         newImg.style.width = "100%";
         element.appendChild(newImg)
         // console.log(window.screen.width)

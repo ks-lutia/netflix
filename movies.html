@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9618e376df.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <div class="main">
+        <div class="nav" id="nav">
+            <img src="images/logo.png" class="logo">
+            <div class="nav_content">
+                <div class="menu">
+                    <i class="fa-solid fa-bars white"></i>
+
+                    <ul class="ul">
+                        <li> <a href="index.html">Home</a></li>
+                        <li><a href="tvshows.html">TV Shows</a></li>
+                        <li><a href="movies.html" class="active">Movies</a></li>
+                        <li><a href="new.html">New & Popular</a></li>
+                        <li><a href="mylist.html">My List</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul class="ul2">
+
+                        <li><i class="fa-solid fa-magnifying-glass white"></i></li>
+
+                        <li> <i class="fa-solid fa-bell white"></i></li>
+                        <li>
+                            <button onclick="toggleDropdown()" class="dropdown_btn">
+                                <img src="images/avatar2.png">
+                                <i class="fa-solid fa-caret-down white"></i>
+                            </button>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <img src="images/hey.jpg" class="bg">
+
+        <img src="images/film name.webp" class="filmname">
+    </div>
+    <div class="dropdown d-none" id="dropdown">
+
+    </div>
+    <div class="des">
+
+
+        <h2 class="movie">#1 in Movies Today</h2>
+        <p class="about_movie"> An unhappy Mouna plots to divorce her talkative <br>
+            husband Yaazhart and asks therapist malarvizhi to woo <br> him-but faces a dilemma when love blooms. </p>
+    </div>
+    <div class="buttons">
+        <button class="but1"> <i class="fa-solid fa-play"></i> </i>Play</button>
+        <button class="but2"><i class="fa-light fa-circle-info"></i>More info</button>
+    </div>
+    <div class="blank">
+
+    </div>
+    <section class="thumbSection">
+        <h3 class="pop first thumbTitle"> Popular On Netflix</h3>
+        <div class="thumbTiles swiper-container swiper">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net13.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net1.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net2.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net3.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net4.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <section class="thumbSection">
+        <h3 class="pop first thumbTitle"> Blockbuster Movies</h3>
+        <div class="thumbTiles swiper-container swiper">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/film card.webp" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net5.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net6.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net7.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net12.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <section class="thumbSection">
+        <h3 class="pop first thumbTitle"> Trending Now</h3>
+        <div class="thumbTiles swiper-container swiper">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net17.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net8.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net9.jpeg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net10.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net11.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <section class="thumbSection">
+        <h3 class="pop first thumbTitle"> Big Releases</h3>
+        <div class="thumbTiles swiper-container swiper">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net16.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net12.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net13.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net14.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="thumbTitle">
+                        <img src="images/net15.jpg" class="thumbTile__image">
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <div id="test" class="popup">
+
+    </div>
+
+
+
+
+    <div class="footer">
+
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+
+
+    </div>
+    <div class="foot1">
+        <a>Audios and subtitles</a>
+        <a>Audio Description</a>
+        <a>Help centre</a>
+        <a>Git cards</a>
+       
+    </div>
+    <div class="foot2">
+        <a>Media centre</a>
+        <a>Invester</a>
+        <a class="footjob">Jobs</a>
+        <a>Terms of use</a>
+       
+    </div>
+    <div class="foot3">
+        <a>Privacy</a>
+        <a class="footlegal">Legal Notices</a>
+        <a class="footcookie">Cookie preferences</a>
+        <a>Corporate information</a>
+       
+    </div>
+    <div class="foot3">
+        <a>Contact us</a>
+    </div>
+    <div class="foot5">
+        <a>Service Code</a>
+    </div>
+
+   <script src="js/script.js"></script>
+
+</body>
+
+</html>
